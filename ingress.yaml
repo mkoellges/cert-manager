@@ -3,20 +3,20 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
-  name: example-app
+  name: my-nginx
 spec:
   tls:
     - hosts:
-        - example-app.example.com
+        - app.dev.example.com
       secretName: example-app-tls
   rules:
-    - host: example-app.example.com
+    - host: app.dev.example.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: example-service
+                name: my-nginx
                 port:
                   number: 80
