@@ -5,13 +5,13 @@
 ```sh
 # get cert-manager
 
-curl -LO https://github.com/jetstack/cert-manager/releases/download/v1.8.1/cert-manager.yaml
+curl -LO https://github.com/jetstack/cert-manager/releases/download/v1.9.1/cert-manager.yaml
 
-mv cert-manager.yaml cert-manager-1.8.1.yaml
+mv cert-manager.yaml cert-manager-1.9.1.yaml
 
 # install cert-manager
 
-kubectl apply --validate=false -f cert-manager-1.8.1.yaml
+kubectl apply --validate=false -f cert-manager-1.9.1.yaml
 
 kubectl -n cert-manager get all
 ```
